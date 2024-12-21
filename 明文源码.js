@@ -157,10 +157,10 @@ export default {
 					//const timestamp = Math.floor(now / 1000);
 					const today = new Date(now);
 					today.setHours(0, 0, 0, 0);
-					const UD = Math.floor(((now - today.getTime())/86400000) * 24 * 1099511627776 / 2);
+					const UD = Math.floor(((now - today.getTime())/86400000) * 0.001 * 1099511627776 / 2);
 					let pagesSum = UD;
 					let workersSum = UD;
-					let total = 24 * 1099511627776 ;
+					let total = 255 * 1099511627776 ;
 
 					if (userAgent && (userAgent.includes('mozilla') || userAgent.includes('subconverter'))){
 						return new Response(`<div style="font-size:13px;">${特洛伊Config}</div>`, {
